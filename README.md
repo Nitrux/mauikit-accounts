@@ -1,4 +1,4 @@
-# MauiKit accounts [![Build Status](https://travis-ci.org/Nitrux/mauikit-accounts.svg?branch=main)](https://travis-ci.org/Nitrux/mauikit-accounts)
+# MauiKit accounts [![Build Status](https://travis-ci.org/Nitrux/mauikit-accounts.svg?branch=arm64)](https://travis-ci.org/Nitrux/mauikit-accounts)
 
 MauiKit-accounts from Git master.
 
