@@ -1,3 +1,9 @@
+mauikit-accounts (0.0.4+2.0.1+git) nitrux; urgency=medium
+
+  * Update to v2.0.1..
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Fri, 13 Aug 2021 02:02:00 -0500
+
 mauikit-accounts (0.0.3+2.0.0+git) nitrux; urgency=medium
 
   * Bump version.
