@@ -105,7 +105,7 @@ checkinstall -D -y \
 	--pakdir=../.. \
 	--maintainer="Uri Herrera <uri_herrera@nxos.org>" \
 	--provides=libmauikitaccounts1,libmauikitaccounts-dev,qml-module-org-mauikit-accounts \
-	--requires="libc6,libqt5core5a,libqt5qml5,libqt5sql5,libstdc++6libmauikit \(\>= 2.1.0\)qml-module-org-kde-kirigami2,qml-module-org-kde-mauikit \(\>= 2.1.0\)" \
+	--requires="libc6,libqt5core5a,libqt5qml5,libqt5sql5,libstdc++6,libmauikit \(\>= 2.1.0\),qml-module-org-kde-kirigami2,qml-module-org-kde-mauikit \(\>= 2.1.0\)" \
 	--nodoc \
 	--strip=no \
 	--stripso=yes \
