@@ -39,13 +39,13 @@ DEBIAN_FRONTEND=noninteractive apt -qq update
 ### Accounts needs ECM > 5.70
 
 DEBIAN_FRONTEND=noninteractive apt -qq -yy install --no-install-recommends \
+	libkf5config-dev \
 	libkf5coreaddons-dev \
 	libkf5i18n-dev \
 	libkf5kio-dev \
 	mauikit-dev \
 	qtbase5-dev \
-	qtdeclarative5-dev \
-	qtquickcontrols2-5-dev
+	qtdeclarative5-dev
 
 DEBIAN_FRONTEND=noninteractive apt -qq -yy install --only-upgrade \
 	extra-cmake-modules
