@@ -43,7 +43,7 @@ DEBIAN_FRONTEND=noninteractive apt -qq -yy install --no-install-recommends \
 	libkf5coreaddons-dev \
 	libkf5i18n-dev \
 	libkf5kio-dev \
-	mauikit \
+	mauikit-git \
 	qtbase5-dev \
 	qtdeclarative5-dev
 
@@ -52,7 +52,7 @@ DEBIAN_FRONTEND=noninteractive apt -qq -yy install --only-upgrade \
 
 ### Clone Repository
 
-git clone --depth 1 --branch v2.1 https://invent.kde.org/maui/mauikit-accounts.git
+git clone --depth 1 --branch master https://invent.kde.org/maui/mauikit-accounts.git
 
 rm -rf mauikit-accounts/{examples,LICENSE,README.md}
 
