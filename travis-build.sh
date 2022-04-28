@@ -52,7 +52,7 @@ DEBIAN_FRONTEND=noninteractive apt -qq -yy install --only-upgrade \
 
 ### Clone Repository
 
-git clone --depth 1 --branch v2.1.1 https://invent.kde.org/maui/mauikit-accounts.git
+git clone --depth 1 --branch master https://invent.kde.org/maui/mauikit-accounts.git
 
 rm -rf mauikit-accounts/{examples,LICENSE,README.md}
 
@@ -96,16 +96,16 @@ checkinstall -D -y \
 	--install=no \
 	--fstrans=yes \
 	--pkgname=mauikit-accounts-git \
-	--pkgversion=2.1.1+git+2 \
+	--pkgversion=2.1.2+git+1 \
 	--pkgarch=amd64 \
 	--pkgrelease="1" \
 	--pkglicense=LGPL-3 \
-	--pkggroup=lib \
+	--pkggroup=libs \
 	--pkgsource=mauikit-accounts \
 	--pakdir=../.. \
 	--maintainer=uri_herrera@nxos.org \
 	--provides=mauikit-accounts-git \
-	--requires="libc6,mauikit-git \(\>= 2.1.1+git\),libqt5core5a,libqt5qml5,libqt5sql5,libstdc++6,qml-module-org-kde-kirigami2,qml-module-qtquick-controls2,qml-module-qtquick-shapes" \
+	--requires="libc6,mauikit-git \(\>= 2.1.2+git\),libqt5core5a,libqt5qml5,libqt5sql5,libstdc++6,qml-module-org-kde-kirigami2,qml-module-qtquick-controls2,qml-module-qtquick-shapes" \
 	--nodoc \
 	--strip=no \
 	--stripso=yes \
