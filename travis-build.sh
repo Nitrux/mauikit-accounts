@@ -96,7 +96,7 @@ checkinstall -D -y \
 	--install=no \
 	--fstrans=yes \
 	--pkgname=mauikit-accounts-git \
-	--pkgversion=2.1.2+git+1 \
+	--pkgversion=2.1.2+git+2 \
 	--pkgarch=amd64 \
 	--pkgrelease="1" \
 	--pkglicense=LGPL-3 \
