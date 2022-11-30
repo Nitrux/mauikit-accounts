@@ -73,7 +73,7 @@ checkinstall -D -y \
 	--pakdir=. \
 	--maintainer=uri_herrera@nxos.org \
 	--provides=mauikit-accounts-git \
-	--requires="libc6,mauikit-git \(\>= 2.2.0+git\),libqt5core5a,libqt5qml5,libqt5sql5,libstdc++6,qml-module-org-kde-kirigami2,qml-module-qtquick-controls2,qml-module-qtquick-shapes" \
+	--requires="libc6,mauikit-git \(\>= 2.2.1+git\),libqt5core5a,libqt5qml5,libqt5sql5,libstdc++6,qml-module-org-kde-kirigami2,qml-module-qtquick-controls2,qml-module-qtquick-shapes" \
 	--nodoc \
 	--strip=no \
 	--stripso=yes \
