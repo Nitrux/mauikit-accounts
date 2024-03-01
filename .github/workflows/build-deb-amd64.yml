@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-22.04
 
     container:
-      image: debian:trixie
+      image: ubuntu:noble
       env:
         DEBIAN_FRONTEND: noninteractive
         PACKAGECLOUD_TOKEN: ${{ secrets.PACKAGECLOUD_TOKEN }}
