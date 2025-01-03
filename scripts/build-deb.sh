@@ -1,21 +1,32 @@
-#! /bin/bash
+#!/bin/bash
 
 set -x
 
 ### Update sources
 
-wget -qO /etc/apt/sources.list.d/nitrux-depot.list https://raw.githubusercontent.com/Nitrux/iso-tool/legacy/configs/files/sources/sources.list.nitrux
-wget -qO /etc/apt/sources.list.d/nitrux-testing.list https://raw.githubusercontent.com/Nitrux/iso-tool/legacy/configs/files/sources/sources.list.nitrux.testing
+mkdir -p /etc/apt/keyrings
 
-curl -L https://packagecloud.io/nitrux/depot/gpgkey | apt-key add -;
-curl -L https://packagecloud.io/nitrux/testing/gpgkey | apt-key add -;
-curl -L https://packagecloud.io/nitrux/unison/gpgkey | apt-key add -;
+curl -fsSL https://packagecloud.io/nitrux/depot/gpgkey | gpg --dearmor -o /etc/apt/keyrings/nitrux_depot-archive-keyring.gpg
+curl -fsSL https://packagecloud.io/nitrux/testing/gpgkey | gpg --dearmor -o /etc/apt/keyrings/nitrux_testing-archive-keyring.gpg
+curl -fsSL https://packagecloud.io/nitrux/unison/gpgkey | gpg --dearmor -o /etc/apt/keyrings/nitrux_unison-archive-keyring.gpg
 
-apt update
+cat <<EOF > /etc/apt/sources.list.d/nitrux-depot.list
+deb [signed-by=/etc/apt/keyrings/nitrux_depot-archive-keyring.gpg] https://packagecloud.io/nitrux/depot/debian/ trixie main
+EOF
+
+cat <<EOF > /etc/apt/sources.list.d/nitrux-testing.list
+deb [signed-by=/etc/apt/keyrings/nitrux_testing-archive-keyring.gpg] https://packagecloud.io/nitrux/testing/debian/ trixie main
+EOF
+
+cat <<EOF > /etc/apt/sources.list.d/nitrux-unison.list
+deb [signed-by=/etc/apt/keyrings/nitrux_unison-archive-keyring.gpg] https://packagecloud.io/nitrux/unison/debian/ trixie main
+EOF
+
+apt -q update
 
 ### Install Package Build Dependencies #2
 
-apt -qq -yy install --no-install-recommends \
+apt -q -y install --no-install-recommends \
 	mauikit-git
 
 ### Download Source
@@ -41,7 +52,7 @@ cmake \
 	-DCMAKE_VERBOSE_MAKEFILE=ON \
 	-DCMAKE_INSTALL_LIBDIR=/usr/lib/x86_64-linux-gnu ../mauikit-accounts/
 
-make -j$(nproc)
+make -j"$(nproc)"
 
 make install
 
@@ -56,8 +67,8 @@ make install
 	'any Maui app to run on various platforms + devices,' \
 	'like Linux Desktop and Phones, Android, or Windows.' \
 	'' \
-	'This package contains the MauiKit accounts shared library, the MauiKit accounts qml module' \
-	'and the MauiKit accounts development files.' \
+	'This package contains the MauiKit accounts shared library, the MauiKit accounts QML module' \
+	'and the MauiKit accounts development headers.' \
 	'' \
 	''
 
@@ -74,7 +85,7 @@ checkinstall -D -y \
 	--pakdir=. \
 	--maintainer=uri_herrera@nxos.org \
 	--provides=mauikit-accounts-git \
-	--requires="libc6,mauikit-git \(\>= 3.1.0+git\),libqt5core5a,libqt5qml5,libqt5sql5,libstdc++6,qml-module-org-kde-kirigami2,qml-module-qtquick-controls2,qml-module-qtquick-shapes" \
+	--requires="libc6,libqt6core6t64,libqt6qml6,libqt6sql6,mauikit-git \(\>= 4.0.1+git\),qml6-module-org-kde-kirigami,qml6-module-qtquick-controls2,qml6-module-qtquick-shapes" \
 	--nodoc \
 	--strip=no \
 	--stripso=yes \
