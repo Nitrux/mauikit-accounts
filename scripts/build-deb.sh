@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -x
+set -eu
 
 ### Update sources
 
@@ -85,7 +85,7 @@ checkinstall -D -y \
 	--pakdir=. \
 	--maintainer=uri_herrera@nxos.org \
 	--provides=mauikit-accounts-git \
-	--requires="libc6,libqt6core6t64,libqt6qml6,libqt6sql6,mauikit-git \(\>= 4.0.1+git\),qml6-module-org-kde-kirigami,qml6-module-qtquick-controls,qml6-module-qtquick-shapes" \
+	--requires="libc6,libqt6core6t64,libqt6qml6,libqt6sql6,mauikit-git \(\>= 4.0.1\),qml6-module-org-kde-kirigami,qml6-module-qtquick-controls,qml6-module-qtquick-shapes" \
 	--nodoc \
 	--strip=no \
 	--stripso=yes \
