@@ -41,25 +41,25 @@ fi
 
 $APT_COMMAND update -q
 $APT_COMMAND install -qy --no-install-recommends \
-    appstream
-    automake
-    autotools-dev
-    build-essential
-    checkinstall
-    cmake
-    curl
-    devscripts
-    equivs
-    extra-cmake-modules
-    gettext
-    git
-    gnupg2
-    lintian
-    libkf6config-dev
-    libkf6coreaddons-dev
-    libkf6i18n-dev
-    libkf6kio-dev
-    qt6-base-dev
+    appstream \
+    automake \
+    autotools-dev \
+    build-essential \
+    checkinstall \
+    cmake \
+    curl \
+    devscripts \
+    equivs \
+    extra-cmake-modules \
+    gettext \
+    git \
+    gnupg2 \
+    lintian \
+    libkf6config-dev \
+    libkf6coreaddons-dev \
+    libkf6i18n-dev \
+    libkf6kio-dev \
+    qt6-base-dev \
     qt6-declarative-dev
 
 
