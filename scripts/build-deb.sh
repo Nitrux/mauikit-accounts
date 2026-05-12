@@ -11,7 +11,7 @@ set -e
 
 # -- Download Source1
 
-git clone --depth 1 --branch "$MAUIKIT_ACCOUNTS_BRANCH" https://invent.kde.org/maui/mauikit-accounts.git
+git clone --depth 1 --branch "$MAUIKIT_ACCOUNTS_BRANCH" https://github.com/Nitrux/mauikit-accounts-src.git
 
 rm -rf mauikit-accounts/{LICENSE,README.md}
 
