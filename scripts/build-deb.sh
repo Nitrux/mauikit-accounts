@@ -59,7 +59,7 @@ Priority: optional
 Architecture: ${TARGET_ARCH}
 Maintainer: uri_herrera@nxos.org
 Provides: mauikit-accounts
-Depends: libqt6dbus6,libqt6network6,libqt6quick6,libc6,libkf6configcore6,libkf6coreaddons6,libkf6i18n6,libkf6kiocore6,libqt6core6t64,libqt6qml6,libqt6sql6,mauikit (>= 4.0.4),qml6-module-org-kde-kirigami,qml6-module-qtquick-controls,qml6-module-qtquick-shapes
+Depends: libqt6dbus6,libqt6network6,libqt6quick6,libc6,libkf6configcore6,libkf6coreaddons6,libkf6i18n6,libkf6kiocore6,libqt6core6t64,libqt6qml6,libqt6sql6,libsecret-1-0,mauikit (>= 4.0.4),qml6-module-org-kde-kirigami,qml6-module-qtquick-controls,qml6-module-qtquick-shapes
 Description: mauikit-accounts
  mauikit-accounts
 CONTROL
